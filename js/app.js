@@ -93,12 +93,12 @@ const updateViewList = () => {
     let html = "";
     list_of_tasks.forEach(task => {
         let done = task.done ? 'done' : '';
-        let done_title = task.done ? 'Mark task as uncomplete' : 'Mark task as complete';
+        let done_title = task.done ? 'Mark todo as uncomplete' : 'Mark todo as complete';
         let done_hover = task.done ? 'notdone' : '';
         
         html += '<div id="'+ task.id +'" class="row-todo">';
         html += '<div class="row-todo-description '+ done_hover +'" onclick="toggleTodoTask('+ task.id +')" title="'+ done_title +'"><div class="row-todo-description-text '+ done +'">'+ task.todo+'</div></div>';
-        html += '<div class="row-todo-delete" onclick="removeTodoTask('+ task.id +')" title="Delete task">x</div>';
+        html += '<div class="row-todo-delete" onclick="removeTodoTask('+ task.id +')" title="Delete todo">x</div>';
         html += '</div>'
     });
 
