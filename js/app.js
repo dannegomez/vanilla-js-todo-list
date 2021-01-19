@@ -129,7 +129,7 @@ const saveList = () => {
  * Function to load previusly saved list in localstorage
  */
 const loadList = () => {
-    if( localStorage.getItem('todo-list-v1').length>0 ){
+    if( localStorage.getItem('todo-list-v1') ){
         list_of_tasks = JSON.parse(localStorage.getItem("todo-list-v1"));
         //update view with tasks
         updateViewList();
